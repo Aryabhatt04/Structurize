@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visualizer.controller.GraphController">
+    <top>
+        <VBox fx:id="controlsBox" alignment="CENTER" BorderPane.alignment="CENTER">
+            <Label styleClass="structure-title" text="Graph" />
+            <HBox alignment="CENTER" spacing="10.0" style="-fx-padding: 5;">
+                <children>
+                    <Label text="Node ID:" />
+                    <TextField fx:id="nodeTextField" onAction="#handleAddNode" promptText="e.g., A" prefWidth="100.0" />
+                    <Button onAction="#handleAddNode" text="Add Node" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0" style="-fx-padding: 5;">
+                <children>
+                    <Label text="Edge From:" />
+                    <TextField fx:id="edgeFromTextField" promptText="e.g., A" prefWidth="100.0" />
+                    <Label text="To:" />
+                    <TextField fx:id="edgeToTextField" promptText="e.g., B" prefWidth="100.0" />
+                    <Button onAction="#handleAddEdge" text="Add Edge" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="10.0" />
+                </padding>
+                <children>
+                    <Label text="Start Node:" />
+                    <TextField fx:id="startNodeTextField" promptText="e.g., A" prefWidth="100.0" />
+                    <Button onAction="#handleBFS" text="Run BFS" />
+                    <Button onAction="#handleDFS" text="Run DFS" />
+                    <Button onAction="#handleReset" styleClass="button-danger" text="Reset" />
+                </children>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <Pane fx:id="visualizationPane" BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <Label fx:id="explanationLabel" styleClass="explanation-label" text="Add nodes and edges to build your graph." BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>

@@ -1,0 +1,239 @@
+/* Base Styles */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #2b2b2b; /* Dark background */
+    -fx-text-fill: #e0e0e0; /* Light text for contrast */
+}
+
+/* Titles */
+.main-title {
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8be9fd; /* Accent color */
+}
+
+.main-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #a0a0a0;
+}
+
+.structure-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #50fa7b; /* Another accent color */
+    -fx-padding: 15px 0 10px 0;
+}
+
+/* Structure Cards (Main Menu) */
+.structure-card {
+    -fx-background-color: #3c3c3c; /* Slightly lighter dark background */
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #555555;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 180px;
+    -fx-spacing: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 0); /* Subtle shadow */
+    -fx-cursor: hand;
+    -fx-transition: -fx-background-color 0.2s ease, -fx-border-color 0.2s ease, -fx-effect 0.2s ease;
+}
+
+.structure-card:hover {
+    -fx-background-color: #4a4a4a; /* Lighter on hover */
+    -fx-border-color: #8be9fd; /* Accent border on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 15, 0, 0, 0);
+}
+
+.structure-card-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f8f8f2; /* Bright text */
+    -fx-padding-bottom: 5px;
+}
+
+.structure-card-desc {
+    -fx-font-size: 13px;
+    -fx-fill: #c0c0c0; /* Slightly dimmer text */
+    -fx-text-alignment: center;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #6272a4; /* Dracula purple accent */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 18px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 0);
+    -fx-transition: -fx-background-color 0.2s ease, -fx-effect 0.2s ease;
+}
+
+.button:hover {
+    -fx-background-color: #7a8dc7;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0, 0, 0);
+}
+
+.button-danger {
+    -fx-background-color: #ff5555; /* Red for destructive actions */
+}
+
+.button-danger:hover {
+    -fx-background-color: #ff7f7f;
+}
+
+/* Text Fields */
+.text-field {
+    -fx-background-color: #44475a; /* Darker input field */
+    -fx-text-fill: #f8f8f2;
+    -fx-highlight-fill: #8be9fd;
+    -fx-highlight-text-fill: #2b2b2b;
+    -fx-prompt-text-fill: #a0a0a0;
+    -fx-border-color: #6272a4;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-padding: 5px 8px;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.explanation-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #c0c0c0;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+.explanation-label.error {
+    -fx-text-fill: #ff5555;
+    -fx-font-weight: bold;
+}
+
+/* Pane backgrounds for visualization */
+.visualization-pane {
+    -fx-background-color: #282a36; /* Even darker background for the visualization area */
+    -fx-border-color: #44475a;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+}
+
+/* --- Data Structure Specific Styles --- */
+
+/* Nodes (shared) */
+.data-node {
+    -fx-background-color: #007acc; /* Bright blue for node background */
+    -fx-background-radius: 5px;
+    -fx-border-color: #00aaff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 0, 0);
+}
+
+.data-node-text {
+    -fx-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Stack/Queue Capacity Bar */
+.capacity-bar {
+    -fx-background-color: #44475a;
+    -fx-border-color: #6272a4;
+    -fx-border-width: 1px;
+    -fx-padding: 2px;
+}
+
+.capacity-fill {
+    -fx-background-color: #50fa7b;
+}
+
+/* Pointer Lines (Linked List, BST, Graph) */
+.pointer-line {
+    -fx-stroke: #bd93f9; /* Purple accent for pointers */
+    -fx-stroke-width: 2px;
+    -fx-stroke-linecap: round;
+}
+
+/* BST Nodes */
+.data-node-circle {
+    -fx-fill: #007acc;
+    -fx-stroke: #00aaff;
+    -fx-stroke-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 0, 0);
+}
+
+/* Graph Nodes */
+.graph-node {
+    -fx-cursor: hand;
+}
+
+.graph-node:hover .data-node-circle {
+    -fx-fill: #005fa3; /* Darker blue on hover */
+}
+
+
+/* === TAB PANE STYLES === */
+.tab-pane {
+    -fx-background-color: #2b2b2b; /* Match root background */
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: #3c3c3c; /* Slightly lighter for header */
+}
+
+.tab-pane .tab-header-area .tab-label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.tab-pane .tab-header-area .tab {
+    -fx-background-color: #44475a; /* Default tab color */
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+    -fx-border-width: 0 0 2px 0; /* Bottom border for inactive */
+    -fx-border-color: transparent;
+    -fx-text-fill: #c0c0c0;
+}
+
+.tab-pane .tab-header-area .tab:selected {
+    -fx-background-color: #2b2b2b; /* Active tab background */
+    -fx-border-color: #8be9fd; /* Active tab accent bottom border */
+    -fx-border-width: 0 0 2px 0;
+    -fx-text-fill: #f8f8f2; /* Active tab brighter text */
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab-header-area .tab:hover {
+    -fx-background-color: #5a5d7c; /* Hover effect on tabs */
+}
+
+.tab-pane .tab-content-area {
+    -fx-background-color: #2b2b2b; /* Match root background for content */
+}
+
+/* Close button on tabs */
+.tab-pane .tab .tab-close-button {
+    -fx-background-color: transparent;
+    -fx-shape: "M 0 0 L 6 6 M 0 6 L 6 0"; /* X shape */
+    -fx-padding: 0;
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
+
+.tab-pane .tab .tab-close-button:hover {
+    -fx-background-color: #ff5555; /* Red on hover */
+}
+.tab-pane .tab .tab-close-button .icon {
+    -fx-stroke: #e0e0e0; /* Color of the X */
+    -fx-stroke-width: 2px;
+}
+.tab-pane .tab .tab-close-button:hover .icon {
+     -fx-stroke: white; /* Color of the X on hover */
+}

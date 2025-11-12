@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visualizer.controller.BinaryTreeController">
+    <top>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <Label styleClass="structure-title" text="Binary Search Tree" />
+            <HBox fx:id="controlsBox" alignment="CENTER" spacing="10.0">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+                <children>
+                    <Label text="Value:" />
+                    <TextField fx:id="valueTextField" onAction="#handleInsert" promptText="Enter integer" />
+                    <Button fx:id="insertButton" onAction="#handleInsert" text="Insert" />
+                    <Button fx:id="searchButton" onAction="#handleSearch" text="Search" />
+                    <Button fx:id="resetButton" onAction="#handleReset" styleClass="button-danger" text="Reset" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0" style="-fx-padding-bottom: 10;">
+                <Button onAction="#handleInOrder" text="In-Order" />
+                <Button onAction="#handlePreOrder" text="Pre-Order" />
+                <Button onAction="#handlePostOrder" text="Post-Order" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <Pane fx:id="visualizationPane" BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <Label fx:id="explanationLabel" styleClass="explanation-label" text="Enter an integer value and click 'Insert'." BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>

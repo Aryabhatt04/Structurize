@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visualizer.controller.MainMenuController">
+    <top>
+        <VBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label styleClass="main-title" text="Structurize" />
+                <Label styleClass="main-subtitle" text="A Modern Data Structure Visualizer" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" BorderPane.alignment="CENTER">
+            <content>
+                <FlowPane fx:id="menuContainer" alignment="CENTER" hgap="20.0" vgap="20.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <children>
+                        <VBox alignment="TOP_CENTER" onMouseClicked="#handleStackClick" styleClass="structure-card">
+                            <Label styleClass="structure-card-title" text="Stack" />
+                            <Text styleClass="structure-card-desc" text="A LIFO (Last-In, First-Out) data structure." wrappingWidth="180.0" />
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" onMouseClicked="#handleQueueClick" styleClass="structure-card">
+                            <Label styleClass="structure-card-title" text="Queue" />
+                            <Text styleClass="structure-card-desc" text="A FIFO (First-In, First-Out) data structure." wrappingWidth="180.0" />
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" onMouseClicked="#handleLinkedListClick" styleClass="structure-card">
+                            <Label styleClass="structure-card-title" text="Linked List" />
+                            <Text styleClass="structure-card-desc" text="A linear collection of data elements (nodes)." wrappingWidth="180.0" />
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" onMouseClicked="#handleBstClick" styleClass="structure-card">
+                            <Label styleClass="structure-card-title" text="Binary Search Tree" />
+                            <Text styleClass="structure-card-desc" text="A node-based binary tree data structure." wrappingWidth="180.0" />
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" onMouseClicked="#handleGraphClick" styleClass="structure-card">
+                            <Label styleClass="structure-card-title" text="Graph" />
+                            <Text styleClass="structure-card-desc" text="A structure of vertices and edges." wrappingWidth="180.0" />
+                        </VBox>
+                    </children>
+                </FlowPane>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

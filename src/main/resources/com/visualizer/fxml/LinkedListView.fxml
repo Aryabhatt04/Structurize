@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visualizer.controller.LinkedListController">
+    <top>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <Label styleClass="structure-title" text="Linked List" />
+            <HBox alignment="CENTER" spacing="10.0" style="-fx-padding: 10;">
+                <children>
+                    <Label text="Value:" />
+                    <TextField fx:id="valueTextField" promptText="Enter value" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="10.0">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />
+                </padding>
+                <children>
+                    <Button onAction="#handleAddFirst" text="Add First" />
+                    <Button onAction="#handleAddLast" text="Add Last" />
+                    <Button onAction="#handleRemoveFirst" text="Remove First" />
+                    <Button onAction="#handleRemoveLast" text="Remove Last" />
+                    <Button onAction="#handleReset" styleClass="button-danger" text="Reset" />
+                </children>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <Pane fx:id="visualizationPane" BorderPane.alignment="CENTER" />
+    </center>
+    <bottom>
+        <Label fx:id="explanationLabel" styleClass="explanation-label" text="Enter a value and choose an operation." BorderPane.alignment="CENTER" />
+    </bottom>
+</BorderPane>
